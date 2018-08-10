@@ -11,8 +11,6 @@
     <meta name="sogou_site_verification" content="oatSp9uAV5" />
     <!--熊掌号 new-->
     <meta name="baidu-site-verification" content="vOI5lMb7eZ" />
-    <!-- 百度站内搜索 -->
-    <meta name="baidu-site-verification" content="bWYTWZkGPc" />
     <title>
         {% if page.title %} {{ page.title | escape }} {% else %} {{ site.title | escape }} {% endif %}
     </title>
@@ -84,20 +82,6 @@
                 </div>
             </div>
         </nav>
-        <div>
-            <!-- 百度站内搜索 -->
-            <script type="text/javascript">
-                (function() {
-                    document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
-                    var bdcs = document.createElement('script');
-                    bdcs.type = 'text/javascript';
-                    bdcs.async = true;
-                    bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=16616865290045593170' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date() / 3600000);
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(bdcs, s);
-                })();
-            </script>
-        </div>
         <div class="container">
             <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
                 <i class="material-icons">menu</i>
