@@ -17,7 +17,6 @@ excerpt: 简要markdown语法
 		* **[代码块](#1.1.4)**
 		* **[脚注](#1.1.5)**
 		* **[数学公式](#1.1.6)**
-		* **[UML 图](#1.1.7)**
 	* **[浏览器兼容](#1.2)**
 	* **[常用Markdown编辑器推荐](#1.3)**
 
@@ -29,7 +28,6 @@ excerpt: 简要markdown语法
 - **代码块高亮**
 - **图片链接和图片上传**
 - ***LaTex*数学公式**
-- **UML序列图和流程图**
 - **离线写博客**
 - **导入导出Markdown文件**
 
@@ -134,33 +132,6 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 更多LaTex语法请参考 [这儿][3].
 
-#### UML 图: <span id="1.1.7">
-
-可以渲染序列图：
-
-```sequence
-张三->李四: 嘿，小四儿, 写博客了没?
-Note right of 李四: 李四愣了一下，说：
-李四-->张三: 忙得吐血，哪有时间写。
-```
-
-或者流程图：
-
-```flow
-st=>start: 开始
-e=>end: 结束
-op=>operation: 我的操作
-cond=>condition: 确认？
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-- 关于 **序列图** 语法，参考 [这儿][4],
-- 关于 **流程图** 语法，参考 [这儿][5].
-
-
 ### 浏览器兼容 <span id="1.2">
 
  1. 目前，本编辑器对Chrome浏览器支持最为完整。建议大家使用较新版本的Chrome。
@@ -194,8 +165,3 @@ cond(no)->op
 [4]: http://bramp.github.io/js-sequence-diagrams/
 [5]: http://adrai.github.io/flowchart.js/
 [6]: https://github.com/benweet/stackedit
-
-
-
-
-
