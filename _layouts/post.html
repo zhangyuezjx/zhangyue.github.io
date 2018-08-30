@@ -1,4 +1,6 @@
---- layout: default css: ["post.css"] js: ["post.js"] ---
+--- 
+layout: default css: ["post.css"] js: ["post.js"] 
+---
 <div id="post-info">
     <h3>{{page.title}}</h3>
     <!--熊掌号
@@ -42,6 +44,10 @@
     <div class="col s12">
         {{ content }}
     </div>
+</div>
+<div class="wechat">
+    <p>微信公众号，技术文章、软件分享</p>
+    <img src="{{site.baseurl}}/assets/res/knight.png" alt="搜索公众号：程序骑士" width="50%">
 </div>
 
 {% if site.disqus_shortname and page.comments %}
