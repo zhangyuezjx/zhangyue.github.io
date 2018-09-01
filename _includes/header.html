@@ -12,20 +12,34 @@
     <!--熊掌号 new-->
     <meta name="baidu-site-verification" content="vOI5lMb7eZ" />
     <title>
-        {% if page.title %} {{ page.title | escape }} {% else %} {{ site.title | escape }} {% endif %}
+        {% if page.title %} 
+        {{ page.title | escape }} 
+        {% else %} 
+        {{ site.title | escape }} 
+        {% endif %}
     </title>
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicon.ico">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    <!-- <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/stylesheet.css"> {% for css in layout.css %} {% if css contains "//" %}
-    <link rel="stylesheet" href="{{css}}"> {% else %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}"> {% endif %} {% endfor %} {% for css in page.css %} {% if css contains "//" %}
-    <link rel="stylesheet" href="{{css}}"> {% else %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}"> {% endif %} {% endfor %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/stylesheet.css"> 
+    {% for css in layout.css %} 
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}"> 
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}"> 
+    {% endif %} 
+    {% endfor %}
+    {% for css in page.css %} 
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}"> 
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}"> 
+    {% endif %} {% endfor %}
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml"> {% seo title=false %}
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml"> 
+    {% seo title=false %}
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -105,7 +119,7 @@
             <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">person</i>About</a></li>
             <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">email</i>Contact</a></li>
             <li>
-                <a href="javascript:void(0)"><img src="{{site.baseurl}}/assets/res/wechat.ico" width="24px" style="margin-right:32px">微信公众号</a>
+                <a class="waves-effect" href="javascript:void(0)"><img src="{{site.baseurl}}/assets/res/wechat.ico" width="24px" style="margin-right:32px">微信公众号</a>
                 <img src="{{site.baseurl}}/assets/res/knight.png" alt="公众号搜索'程序骑士'" width="80%" style="margin-left:10%">
             </li>
         </ul>
