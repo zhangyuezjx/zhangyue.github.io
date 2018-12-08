@@ -75,7 +75,7 @@ Javascript中可以对一些页面的事件设定触发值，例如常用的点�
 
 ``` html
 <div id="parent1">
-	<div id="child1" style="height:200px;backgroumd:#0cc">
+	<div id="child1" style="height:200px;background:#0cc">
 	冒泡
 	</div>
 </div>
@@ -86,8 +86,8 @@ Javascript中可以对一些页面的事件设定触发值，例如常用的点�
 </div>
 
 <script>
-	var parent1 = document.getElementById("parent");
-	var child2 = document.getElementById("child");
+	var parent1 = document.getElementById("parent1");
+	var child2 = document.getElementById("child1");
 	var parent2 = document.getElementById("parent2");
 	var child2 = document.getElementById("child2");
 	parent1.addEventListener('click', function(){
@@ -105,7 +105,7 @@ Javascript中可以对一些页面的事件设定触发值，例如常用的点�
 </script>
 ```
 
-点击“冒泡”模块，先提示父元素后提示子元素；点击“捕获”模块，由于同时设置为 `true`，先提示子元素后提示父元素。
+点击“冒泡”模块，先提示子元素后提示父元素；点击“捕获”模块，由于同时设置为 `true`，先提示父元素后提示子元素。
 
 #### 区别
 
