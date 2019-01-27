@@ -2,7 +2,7 @@
 title: 搭建Github Pages个人博客网站
 layout: post
 tags: github-pages jekyll
-categories: github
+categories: 网站
 excerpt: Jekyll搭建Github Pages个人博客
 ---
 ### 目录 <span id="home">
