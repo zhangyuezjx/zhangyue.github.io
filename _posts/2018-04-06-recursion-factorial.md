@@ -2,7 +2,7 @@
 title: 递归函数之阶乘的实现
 layout: post
 tags: 递归函数 阶乘
-categories: 函数
+categories: 编程
 excerpt: 用递归函数实现阶乘函数算法
 ---
 #### 定义
