@@ -1,5 +1,5 @@
 ---
-title: 用CSS画一些几何形状
+title: 用CSS画一些多边形状
 layout: post
 categories: CSS
 tags: css三角形 css多边形
