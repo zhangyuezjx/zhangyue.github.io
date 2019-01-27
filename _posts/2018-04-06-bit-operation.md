@@ -2,7 +2,7 @@
 title: 位运算符与位运算
 layout: post
 excerpt: 编程中位运算的介绍与应用
-categories: 运算
+categories: 编程
 tags: 位运算 按位运算
 ---
 ### 目录 <span id="home">
