@@ -2,7 +2,7 @@
 title: Linux中apt install的lock问题
 layout: post
 categories: Linux
-tags: “apt install lock"
+tags: apt-install-lock
 excerpt: apt install过程遇到lock问题的解决方法
 ---
 Linux系统中有时执行 apt install 时，可能会显示以下问题：
