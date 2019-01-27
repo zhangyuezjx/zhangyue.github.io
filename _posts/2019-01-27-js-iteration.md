@@ -1,7 +1,7 @@
 ---
 title: JavaScript深度迭代遍历未知对象
 layout: post
-categories: javascript
+categories: JavaScript
 tags: 迭代遍历 深度遍历 未知对象
 excerpt: 介绍js中对未知对象的遍历方法
 ---
