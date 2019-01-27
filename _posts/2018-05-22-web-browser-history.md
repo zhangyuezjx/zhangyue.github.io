@@ -1,7 +1,7 @@
 ---
 title: web浏览器进化简史
 layout: post
-categories: web浏览器
+categories: 网站
 tags: web浏览器 浏览器发展史
 excerpt: web浏览器的发展简史，常用浏览器的介绍
 ---
