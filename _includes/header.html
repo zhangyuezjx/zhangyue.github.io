@@ -12,41 +12,43 @@
     <!--熊掌号 new-->
     <meta name="baidu-site-verification" content="vOI5lMb7eZ" />
     <title>
-        {% if page.title %} 
-        {{ page.title | escape }} 
-        {% else %} 
-        {{ site.title | escape }} 
+        {% if page.title %}
+        {{ page.title | escape }}
+        {% else %}
+        {{ site.title | escape }}
         {% endif %}
     </title>
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicon.ico">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/stylesheet.css"> 
-    {% for css in layout.css %} 
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/stylesheet.css">
+    {% for css in layout.css %}
     {% if css contains "//" %}
-    <link rel="stylesheet" href="{{css}}"> 
+    <link rel="stylesheet" href="{{css}}">
     {% else %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}"> 
-    {% endif %} 
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %}
     {% endfor %}
-    {% for css in page.css %} 
+    {% for css in page.css %}
     {% if css contains "//" %}
-    <link rel="stylesheet" href="{{css}}"> 
+    <link rel="stylesheet" href="{{css}}">
     {% else %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}"> 
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
     {% endif %} {% endfor %}
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml"> 
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml">
     {% seo title=false %}
 
 </head>
 
 <body>
     <script>
-        (function() {
-            var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f" : "https://jspassport.ssl.qhimg.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f";
+        (function () {
+            var src = (document.location.protocol == "http:") ?
+                "http://js.passport.qihucdn.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f" :
+                "https://jspassport.ssl.qhimg.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f";
             document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
@@ -84,8 +86,10 @@
             <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">person</i>About</a></li>
             <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">email</i>Contact</a></li>
             <li>
-                <a class="waves-effect" href="javascript:void(0)"><img src="{{site.baseurl}}/assets/res/wechat-slide.png" style="margin:12px 32px 0 0">微信公众号</a>
-                <img src="{{site.baseurl}}/assets/res/knight.png" alt="微信公众号搜索：程序骑士" width="80%" title="微信公众号搜索：程序骑士" style="margin-left:10%">
+                <a class="waves-effect" href="javascript:void(0)"><img src="{{site.baseurl}}/assets/res/wechat-slide.png"
+                        style="margin:12px 32px 0 0">微信公众号</a>
+                <img src="{{site.baseurl}}/assets/res/knight.png" alt="微信公众号搜索：程序骑士" width="80%" title="微信公众号搜索：程序骑士"
+                    style="margin-left:10%">
             </li>
         </ul>
         <script>
@@ -95,7 +99,7 @@
                 y = 90;
             var flagx = 0;
             flagy = 2;
-            setInterval(function() {
+            setInterval(function () {
                 cbc.style.background = "linear-gradient(" + x + "deg, #3AA17E 10%, #00537E " + y + "%)";
                 if (flagx == 0) {
                     x++;
