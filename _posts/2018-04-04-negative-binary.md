@@ -1,7 +1,7 @@
 ---
 title: 十进制负数的二进制表示法
 layout: post
-categories: 进制
+categories: 编程
 excerpt: 十进制负数转换为二进制
 tags: 负数二进制
 ---
