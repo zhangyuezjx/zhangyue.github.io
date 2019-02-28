@@ -16,7 +16,7 @@
 title: 黄琦雲的博客
 description: > # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
-baseurl: ""
+baseurl: "/"
 url: "https://knightyun.github.io"
 permalink: /:year/:month/:day/:title
 repository: knightyun/knightyun.github.io
