@@ -46,14 +46,6 @@
 </head>
 
 <body>
-    <script>
-        (function () {
-            var src = (document.location.protocol == "http:") ?
-                "http://js.passport.qihucdn.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f" :
-                "https://jspassport.ssl.qhimg.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f";
-            document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-    </script>
     <header>
         <nav class="top-nav">
             <div class="nav-wrapper" id="changebc">
@@ -61,6 +53,10 @@
                     <a class="page-title" href="{{site.baseurl}}/">{{site.title}}</a>
                     <p class="head-message">学习&nbsp;&nbsp;总结&nbsp;&nbsp;分享&nbsp;&nbsp;提升</p>
                 </div>
+            </div>
+            <div class="search">
+                <label>搜索</label>
+                <input type="text" />
             </div>
         </nav>
         <div class="container">
