@@ -6,7 +6,7 @@ body
   display: flex
   min-height: 100vh
   flex-direction: column
-  background-color: #eee
+  background-color: #ddd
 
 a
   color: #3cf
@@ -28,7 +28,20 @@ footer
 
 .container
   width: 90%
-  //margin-top: 120px
+
+a
+  &.button-collapse
+    &.top-nav
+      position: absolute
+      text-align: center
+      height: 48px
+      width: 48px
+      top: 0
+      float: none
+      color: #fff
+      font-size: 36px
+      z-index: 999
+      line-height: 80px
 
 // Header
 header
@@ -51,22 +64,13 @@ header
     border-style: solid
     border-color: #009688
     border-width: 3px
-	
-a
-  &.button-collapse
-    &.top-nav
-      position: absolute
-      text-align: center
-      height: 48px
-      width: 48px
-      top: 0
-      float: none
-      color: #fff
-      font-size: 36px
-      z-index: 999
-      line-height: 80px
 
 nav 
+  &.top-nav
+    height: 140%
+    background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%) !important
+    background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%) !important
+
   .page-title
     font-size: 36px
     font-weight: bold
@@ -78,16 +82,46 @@ nav
     font-style: italic
     line-height: 20px
 
-nav.top-nav
-  height: 200px
-  background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%) !important
-  background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%) !important
-
   .nav-wrapper
-    height: 80%
+    height: 60%
 
   .search
-    height: 20%
+    // outline: 1px solid lime
+    height: 30px
+    text-align: right
+    line-height: 30px
+    padding-right: 3%
+
+    .search-icon
+      // outline: 1px solid red
+      display: inline-block
+      float: right
+      height: 100%
+      margin: 0 10px
+      line-height: 30px
+      cursor: pointer
+
+    .search-input
+      // outline: 1px solid blue
+      display: inline-block
+      float: right
+      width: 30%
+      height: 30px
+      line-height: 30px
+      margin: 0
+      border: 2px solid #ddd
+      border-radius: 10px
+      box-sizing: border-box
+
+// Main
+main
+  // opacity: .5
+  ul
+    &:not(.browser-default)
+      padding-left: 40px
+
+      li
+        list-style-type: disc
 
 // Footer
 footer.page-footer
@@ -111,15 +145,6 @@ footer.page-footer
 blockquote
   border-left-color: teal
 
-main
-  background-color: #ddd                           
-  ul
-    &:not(.browser-default)
-      padding-left: 40px
-      background-color: #ddd
-
-      li
-        list-style-type: disc
 
 @media only screen and (max-width: 992px)
   header,
