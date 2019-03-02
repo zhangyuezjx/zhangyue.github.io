@@ -3,5 +3,4 @@
 .bundle
 .sass-cache
 _site
-Gemfile
 Gemfile.lock
