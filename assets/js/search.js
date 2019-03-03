@@ -1,4 +1,5 @@
-var searchBtn = document.querySelector('.search-icon');
+var searchBtn = document.querySelector('.search-start');
+var searchClear = document.querySelector('.search-clear');
 var searchInput = document.querySelector('.search-input');
 var searchResults = document.querySelector('.search-results');
 var searchValue = '',
@@ -6,16 +7,17 @@ var searchValue = '',
     arrContents = [],
     arrLinks = [],
     arrTitles = [],
-    arrResults = [];
+    arrResults = [],
     indexItem = [];
 var tmpDiv = document.createElement('div');
 tmpDiv.className = 'result-item';
 
 var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-xhr.onreadystatechange = function(){
+xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
         xml = xhr.responseXML;
         arrItems = xml.getElementsByTagName('item');
+        // Get all article links, titles, contents
         for (i = 0; i < arrItems.length; i++) {
             arrContents[i] = arrItems[i].getElementsByTagName('description')[0].childNodes[0].nodeValue;
             arrLinks[i] = arrItems[i].getElementsByTagName('link')[0].childNodes[0].nodeValue.replace(/\s+/g, '');
@@ -27,50 +29,84 @@ xhr.open('get', '/feed.xml', true);
 xhr.send();
 
 searchBtn.onclick = searchConfirm;
-searchInput.onkeydown = function(evt){
-    if (evt.keyCode == '13') searchConfirm();
+searchClear.onclick = function(){
+    searchInput.value = '';
+    searchResults.style.display = 'none';
+    searchClear.style.display = 'none';
+}
+searchInput.onkeydown = function () {
+    setTimeout(searchConfirm, 0);
+}
+searchInput.onfocus = function () {
+    searchResults.style.display = 'block';
 }
 
 function searchConfirm() {
-    if (searchInput.value == '' || searchInput.value.search(/^\s+$/) >= 0) {
-        // console.log(false);
+    if (searchInput.value == '') {
+        searchResults.style.display = 'none';
+        searchClear.style.display = 'none';
+    } else if (searchInput.value.search(/^\s+$/) >= 0) {
+        // Input are spaces
+        searchInit();
+        var itemDiv = tmpDiv.cloneNode(true);
+        itemDiv.innerText = '请输入有效内容...';
+        searchResults.appendChild(itemDiv);
     } else {
-        console.log(true);
-        clearData();
+        // Valid input
+        searchInit();
         searchValue = searchInput.value;
         searchMatching(arrContents, searchValue);
     }
 }
 
-function clearData() {
+function searchInit() {
     arrResults = [];
     indexItem = [];
     searchResults.innerHTML = '';
+    searchResults.style.display = 'block';
+    searchClear.style.display = 'block';
 }
 
-function searchMatching(matchArr, matchInput) {
-    for (i = 0; i < matchArr.length; i++) {
-        if (matchArr[i].search(matchInput) >= 0) {
+function searchMatching(arr, input) {
+    // Match the input in all contents
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].search(input) != -1) {
             indexItem.push(i);
-            var indexContent = matchArr[i].search(matchInput);
-            var l = matchInput.length;
-            arrResults.push(matchArr[0].slice(indexContent - 10, indexContent + l + 10));
+            var indexContent = arr[i].search(input);
+            var l = input.length;
+            var step = 10;
+            // Mark the match content, and output surround content
+            arrResults.push(arr[i].slice(indexContent - step, indexContent) +
+                '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +
+                arr[i].slice(indexContent + l, indexContent + l + step));
         }
     }
+
+    // Output total matchs number
+    var totalDiv = tmpDiv.cloneNode(true);
+    totalDiv.innerHTML = '总匹配：<b>' + indexItem.length + '</b> 项';
+    searchResults.appendChild(totalDiv);
+
+    // Result array length is 0
     if (indexItem.length == 0) {
-        console.log('no matching');
         var itemDiv = tmpDiv.cloneNode(true);
-        itemDiv.innerText = 'no matching';
+        itemDiv.innerText = '未匹配到内容...';
         searchResults.appendChild(itemDiv);
     }
-    for (i = 0, j = 0; i < arrResults.length, j < indexItem.length; i++, j++) {
+
+    // Out put all of the result titles, contents
+    for (i = 0; i < arrResults.length; i++) {
         var itemDiv = tmpDiv.cloneNode(true);
-        itemDiv.innerHTML = '<b>' + indexItem[i] + '</b> <br />' + arrResults[i];
+        itemDiv.innerHTML = '<b>《' + arrTitles[indexItem[i]] +
+            '》</b><hr />' + arrResults[i];
         itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
         searchResults.appendChild(itemDiv);
     }
 }
 
 function changeHref(href) {
+    // Goto the result page
     location.href = href;
+    // Goto a new page
+    // window.open(href);
 }

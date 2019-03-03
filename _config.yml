@@ -41,6 +41,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
 sass:
   style: compressed
 future: true

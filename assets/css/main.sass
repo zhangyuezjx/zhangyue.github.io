@@ -20,7 +20,7 @@ a:active
 main
   flex: 1 0 auto
 
-// PC position
+// PC condition
 header,
 main,
 footer
@@ -54,11 +54,6 @@ header
     background-image: url(/assets/res/bg.png)
     background-size:contain
     background-repeat: no-repeat
- 
-  .background
-  
-    background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
-    background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
 
   .circle
     border-style: solid
@@ -68,8 +63,8 @@ header
 nav 
   &.top-nav
     height: 140%
-    background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%) !important
-    background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%) !important
+    background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
+    background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
 
   .page-title
     font-size: 36px
@@ -87,7 +82,7 @@ nav
 
   .search
     // outline: 1px solid lime
-    display: none
+    // display: none
     position: relative
     height: 30px
     text-align: right
@@ -102,6 +97,7 @@ nav
       margin: 0 10px
       line-height: 30px
       cursor: pointer
+      user-select: none
 
     .search-input
       // outline: 1px solid blue
@@ -115,6 +111,9 @@ nav
       border-radius: 10px
       box-sizing: border-box
 
+    .search-clear
+      display: none
+      
     .search-results
       display: block
       z-index: 1000
@@ -132,7 +131,10 @@ nav
       .result-item
         background: aqua
         color: black
-        margin: 5px 0
+        margin: 5px
+        padding: 3px
+        border-radius: 3px
+        cursor: pointer
 
 // Main
 main
@@ -149,6 +151,7 @@ footer.page-footer
   margin-top: 10px
 
   img
+    width: 48px
     border: 3px solid silver
     border-style: ridge
 
@@ -170,7 +173,7 @@ footer.page-footer
 blockquote
   border-left-color: teal
 
-// Tablet position
+// Tablet condition
 @media only screen and (max-width: 992px)
   header,
   main,
@@ -180,10 +183,10 @@ blockquote
   nav 
     .nav-wrapper
       text-align: center
-      background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
-      background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
+      // background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
+      // background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
 
-// Phone position
+// Phone condition
 @media only screen and (max-width: 600px)
   nav
     .page-title
