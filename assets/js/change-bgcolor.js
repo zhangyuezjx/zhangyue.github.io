@@ -1,34 +1,34 @@
-var cbc = document.getElementById("changebc");
+var navBg = document.querySelector('.top-nav');
 var x = 90,
     y = 90;
-var flagx = 0;
-flagy = 2;
+var flagX = 0;
+    flagY = 2;
 setInterval(function () {
-    cbc.style.background = "linear-gradient(" + x + "deg, #3AA17E 10%, #00537E " + y + "%)";
-    if (flagx == 0) {
+    navBg.style.background = "linear-gradient(" + x +
+        "deg, #3AA17E 10%, #00537E " + y + "%)";
+    if (flagX == 0) {
         x++;
         if (x == 360) {
-
-            flagx = 1;
+            flagX = 1;
         }
-    } else if (flagx == 1) {
+    } else if (flagX == 1) {
         x--;
         if (x == 90) {
-            flagx = 2;
-            flagy = 0;
+            flagX = 2;
+            flagY = 0;
         }
     }
 
-    if (flagy == 0) {
+    if (flagY == 0) {
         y++;
         if (y == 200) {
-            flagy = 1;
+            flagY = 1;
         }
-    } else if (flagy == 1) {
+    } else if (flagY == 1) {
         y--;
         if (y == 90) {
-            flagy = 2;
-            flagx = 0;
+            flagY = 2;
+            flagX = 0;
         }
     }
 }, 30);
