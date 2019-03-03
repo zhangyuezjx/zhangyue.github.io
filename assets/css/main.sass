@@ -20,7 +20,7 @@ a:active
 main
   flex: 1 0 auto
 
-
+// PC position
 header,
 main,
 footer
@@ -87,10 +87,12 @@ nav
 
   .search
     // outline: 1px solid lime
+    display: none
+    position: relative
     height: 30px
     text-align: right
     line-height: 30px
-    padding-right: 3%
+    padding-right: 10px
 
     .search-icon
       // outline: 1px solid red
@@ -113,6 +115,25 @@ nav
       border-radius: 10px
       box-sizing: border-box
 
+    .search-results
+      display: block
+      z-index: 1000
+      position: absolute
+      top: 30px
+      right: 50px
+      width: 50%
+      max-height: 400px
+      overflow: auto
+      text-align: left
+      border-radius: 5px
+      background: #ccc
+      box-shadow: 0 .3rem .5rem #333
+
+      .result-item
+        background: aqua
+        color: black
+        margin: 5px 0
+
 // Main
 main
   // opacity: .5
@@ -126,6 +147,10 @@ main
 // Footer
 footer.page-footer
   margin-top: 10px
+
+  img
+    border: 3px solid silver
+    border-style: ridge
 
   .row
     margin-bottom: 0px
@@ -145,7 +170,7 @@ footer.page-footer
 blockquote
   border-left-color: teal
 
-
+// Tablet position
 @media only screen and (max-width: 992px)
   header,
   main,
@@ -158,7 +183,15 @@ blockquote
       background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
       background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
 
+// Phone position
 @media only screen and (max-width: 600px)
   nav
     .page-title
       font-size: 20px
+
+    .search
+      .search-input
+        width: 80%
+
+      .search-results
+        width: 80%
