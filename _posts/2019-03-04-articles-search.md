@@ -20,6 +20,7 @@ excerpt: 为个人博客网站添加文章搜索模块
 #### 功能实现
 先预览一下页面最终的实现效果：
 ![search-box](https://i.loli.net/2019/03/04/5c7cea40495b1.png)
+
 或者在这里：<https://knightyun.github.io/> 预览我的博客的搜索模块的最终实现；
 
 ##### HTML部分
