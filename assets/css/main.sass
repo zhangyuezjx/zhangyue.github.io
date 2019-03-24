@@ -29,19 +29,21 @@ footer
 .container
   width: 90%
 
+// Menu button
 a
   &.button-collapse
     &.top-nav
+      // outline: 1px solid lime
       position: absolute
-      text-align: center
-      height: 48px
-      width: 48px
-      top: 0
       float: none
       color: #fff
       font-size: 36px
-      z-index: 999
       line-height: 80px
+      text-align: center
+      height: 48px
+      width: 48px
+      top: 1rem
+      z-index: 999
 
 // Header
 header
@@ -86,20 +88,17 @@ nav
       position: relative
 
       .github-btns
-        // outline: 1px solid red
         position: absolute
         top: 0
         width: 100%
         text-align: right
 
         iframe
+          width: 20%
           margin: 0
           padding: 0
-          width: 20%
 
   .search
-    // outline: 1px solid lime
-    // display: none
     position: relative
     height: 30px
     text-align: right
@@ -107,8 +106,6 @@ nav
     padding-right: 10px
 
     .search-icon
-      // outline: 1px solid red
-      // display: inline-block
       float: right
       height: 100%
       margin: 0 10px
@@ -117,8 +114,6 @@ nav
       user-select: none
 
     .search-input
-      // outline: 1px solid blue
-      // display: inline-block
       float: right
       width: 30%
       height: 30px
@@ -200,8 +195,6 @@ blockquote
   nav 
     .nav-wrapper
       text-align: center
-      // background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
-      // background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
 
 // Phone condition
 @media only screen and (max-width: 600px)
@@ -215,3 +208,12 @@ blockquote
 
       .search-results
         width: 80%
+
+    &.top-nav
+      .nav-wrapper
+        .container
+          .github-btns
+            text-align: center
+            
+            iframe
+              width: 30%
