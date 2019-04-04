@@ -1,7 +1,7 @@
 ---
 title: Markdown简明教程
 layout: post
-categories: markdown
+categories: 编程
 tags: markdown
 excerpt: 简要markdown语法
 ---
